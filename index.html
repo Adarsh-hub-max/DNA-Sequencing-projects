@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dna Sequencing</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="div">
+
+    <div class="slider">
+    <div class="slide-text">DNA SEQUENCING</div>
+        <h2 >Upload Dataset For Testing The machine Learning Model</h2>
+    </div>
+    <form action="/upload" method="post" enctype="multipart/form-data" >
+        <input type="file" name="dataset" accept=".csv, .txt" align="center">
+        <input type="submit" value="Submit" align="center">
+    </form>
+    <h3 align="center">To evaluate the performance of our DNA sequence classification model,
+        we provide the functionality to upload a custom dataset for testing. The uploaded
+        dataset should be in a CSV format and must follow the structure expected by the
+        trained model, including a column for DNA sequences and their corresponding labels
+        (e.g., Human, Chimpanzee, Dog). Once the dataset is uploaded, it is processed and
+        passed through the Multinomial Naive Bayes classifier, which predicts the species
+        based on the given DNA sequences. This allows users to validate the model’s accuracy
+        and generalization capability on new, unseen data. </h3>
+
+    </div>
+</body>
+</html>
